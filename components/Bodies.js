@@ -27,7 +27,10 @@ AFRAME.registerComponent("coin", {
             loop: "true",
             dur: 1000
         })
-        coin.setAttribute("static-body", {});
+        coin.setAttribute("static-body", {
+            shape: "sphere",
+            sphereRadius: 2
+        });
         coin.setAttribute("collide", {
             collider: `#${id}`
         });
