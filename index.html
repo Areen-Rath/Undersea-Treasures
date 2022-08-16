@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <script src="./components/Rotation.js"></script>
+    </head>
+    <body>
+        <a-scene background="color: #4444aa">
+            <a-camera position="0 1.5 1.5" wasd-controls-enabled="false"></a-camera>
+            <a-assets>
+                <a-asset-item id="islandMap" src="./models/island/scene.gltf"></a-asset-item>
+                <a-asset-item id="scubaDiver" src="./models/diver/scene.gltf"></a-asset-item>
+            </a-assets>
+            <a-entity
+                id="island"
+                gltf-model="#islandMap"
+                position="0 -1 -6"
+                rotation="0 0 0"
+                animation="property: position; to: 0 -1 3; easing:linear; loop: true; dur: 50000"
+                rotate
+            ></a-entity>
+            <a-entity
+                id="diver"
+                gltf-model="#scubaDiver"
+                position="0.5 0 0"
+                rotation="0 90 0"
+                scale="0.01 0.01 0.01"
+                turn
+                coin
+                fish
+            ></a-entity>
+        </a-scene>
+    </body>
+</html>
